@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-func Sqrt(x float64) (float64, float64) {
+func Sqrt(x float64) float64 {
 
 	z := 1.0
 
@@ -13,13 +13,13 @@ func Sqrt(x float64) (float64, float64) {
 		diff := (z*z - x) / (2 * z)
 
 		if z == z-diff {
-			return x, z
+			return z
 		}
 
 		z -= diff
 	}
 
-	return x, z
+	return z
 
 }
 
